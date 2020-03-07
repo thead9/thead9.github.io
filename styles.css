@@ -155,31 +155,27 @@ footer {
 header .logo {
     max-height: 75px;
     border-radius: 20px;
-    margin-right: 10px;
 }
 
 header .header-grid {
     grid-template-columns: 0.25fr 0.25fr 1fr 0.25fr;
-    grid-template-rows: 0.25fr 1fr 0.25fr;
     grid-template-areas:
+    ".  .  .   ."
     ".  hl .   ."
     ".  hl ht  ."
-    ".  hl .   .";
+    ".  hl .   ."
+    ".  .  .   .";
 }
 
 @media(max-width: 768px) {
-/*    header .header-grid {*/
-/*        grid-template-columns: 1fr;*/
-/*        grid-template-rows: 1fr;*/
-/*        grid-template-areas:*/
-/*        "ht";*/
-/*    }*/
     header .header-grid {
-        grid-template-columns: 0.1fr 1fr;
+        grid-template-columns: 0.25fr 1fr;
         grid-template-areas:
+        ".  . "
         "hl . "
         "hl ht"
-        "hl . ";
+        "hl . "
+        ".  . ";
     }
     
     header .site-name {
@@ -188,8 +184,8 @@ header .header-grid {
 }
 
 @media(max-width: 700px) {
-    #header-text {
-        display: none
+    header .site-name {
+        font-size: 1.1em;
     }
 }
 
@@ -199,8 +195,8 @@ header .header-grid {
     }
     
     header .wrapper {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
 
@@ -211,6 +207,7 @@ header .header-grid {
 #header-logo {
     grid-area: hl;
 }
+/* End Header */
 
 /* Screenshots & Images */
 .screenshot {
